@@ -39,7 +39,8 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`AdminID`, `Name`, `PasswordHash`, `Email`) VALUES
-(1, 'Anik', '12345', 'aniklal2020@gmail.com');
+(1, 'Sabit', '12345', 'sabit@gmail.com');
+(1, 'Arefin', '12345', 'arefin@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -108,8 +109,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`UserID`, `FirstName`, `LastName`, `PhoneNumber`, `Email`, `Address`, `PasswordHash`, `IsDriver`, `NIDNumber`) VALUES
-(2, 'Anik', 'Dey', '01537156605', 'anikdey228@gmail.com', 'Banasree,Dhaka', '$2y$10$dG0ouSnGHjDpMTAMWGOYaeDGPUDT4.AxST0PfrDDaYfSd4iTVnx/a', 0, '3536363636'),
-(4, 'Firoz', 'Rizvi', '01738438383', 'rizvi@gmail.com', 'Rampura,Dhaka', '$2y$10$Sx.9x/aFHtNpk20lSvMQF.IwhRZgXEYblD2GhpDSQ3GUqWc8FsUTq', 1, '2036353677');
+(2, 'Sabit', 'Alfi', '01537156655', 'asabit@gmail.com', 'Banasree,Dhaka', '$2y$10$dG0ouSnGHjDpMTAMWGOYaeDGPUDT4.AxST0PfrDDaYfSd4iTVnx/a', 0, '3536363636'),
+(4, 'Arefin', 'Siddique', '01738438373', 'arefin@gmail.com', 'Rampura,Dhaka', '$2y$10$Sx.9x/aFHtNpk20lSvMQF.IwhRZgXEYblD2GhpDSQ3GUqWc8FsUTq', 1, '2036353677');
 
 -- --------------------------------------------------------
 
