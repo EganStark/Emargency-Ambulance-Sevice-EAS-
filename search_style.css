@@ -1,0 +1,50 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    cursor: pointer;
+  }
+  
+  
+  
+#searchInput {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 5px;
+  width: 50%; 
+  outline: none;
+}
+button {
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* Additional styles */
+}
+button:hover {
+  background-color: #45a049; 
+}
+.CALL{
+    cursor: pointer;
+}
+.PLUS{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.CALL:hover{
+    color: red;
+}
+
+.PLUS:hover{
+    color: green;
+}

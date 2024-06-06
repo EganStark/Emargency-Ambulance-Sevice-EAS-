@@ -1,0 +1,426 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ol,ul{
+
+    list-style: none;
+}
+a,a:hover{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,a,p,span,div{
+
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/*banner css start*/
+
+#banner {
+    background: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%; 
+    height: 700px;
+    position: relative;
+    
+}
+.banner_logo{
+  display: flex;
+  align-items: center;
+}
+.banner_logo h4{
+  font-family: 'Lilita+One', cursive;
+  font-weight: bold;
+  margin-right: -270px; 
+  color: rgba(2, 168, 113, 0.664);
+  font-size: 28px;
+}
+.banner_logo i{
+  color: rgba(2, 168, 113, 0.664);;
+}
+
+.header_main .banner_logo{
+    
+    margin-top: 12px;
+}
+
+.navbar-nav .nav-item .nav-link{
+
+   margin-left: 5px;
+   color: black;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 18px;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover{
+   
+    background-color: #04a590;
+    color: white;
+    text-align: center;
+    font-weight: medium;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item{
+  text-align: center;
+  font-weight: medium;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-nav .nav-item .nav-link:hover
+ {
+  color: #04a590; /* Change this to the desired hover color */
+}
+
+/* CSS for button-like styling */
+.banner_main_content {
+     margin-top: 93px;
+     font-family: 'Open Sans', sans-serif;;
+    /* Add other necessary styles for the container */
+  }
+
+  .banner_main_content p{
+    font-size: 50px;
+    margin-bottom: 80px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .banner_main_content a.button {
+    display: inline-block;
+    padding: 10px 50px;
+    text-decoration: none;
+    background-color: #007bff; /* Change this to your desired button color */
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    transition: background-color 0.3s ease;
+    margin-bottom: 200px; /* Smooth transition on hover */
+  }
+  
+  .banner_main_content a.button:hover {
+    background-color: #0056b3; /* Change this to the hover color you want */
+  }
+
+  .banner_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity here */
+}
+
+  
+/*banner css end*/
+
+
+/*common head css start*/
+
+.common_head h4{
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+
+}
+.common_head{
+  margin-bottom: 50px;;
+}
+
+
+.about_img img{
+  width: 900px;
+  height: 400px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.about_content{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.about_content p{
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: medium;
+}
+
+.common_head .line {
+  
+  border: 0;
+  border-top: 2px solid black;
+  margin-top: 5px; /* Adjust as needed */
+  width: 300px;
+  margin: 0 auto;
+}
+
+.common_head h4{
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+/*common head css end*/
+
+
+/*service part css start*/
+
+.gallery_overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all linear 0.3s;
+  
+}
+
+
+
+.small_img{
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.gallery_overlay a{
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  background-color: #5bc5f4;
+  border-radius: 50%;
+}
+
+.small_img:hover .gallery_overlay{
+
+  transform: scale(1);
+  transition: all linear 0.3s;
+
+}
+
+.small_img_content p{
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: medium;
+  font-size: 15px;
+}
+
+
+
+/*service part css end*/
+
+
+/*features css start*/
+
+
+.feature_main{
+  margin-top: 20px;
+}
+
+
+.feature_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #01ecce; /* Replace with your desired background color */
+  border-radius: 50%; /* This creates a circle shape with border-radius */
+  width: 50px; /* Adjust the width and height based on your design */
+  height: 50px;
+  margin-left: 40%;
+  margin-bottom: 10px;
+  
+}
+
+
+
+.feature_icon_second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #01ecce; /* Replace with your desired background color */
+  border-radius: 50%; /* This creates a circle shape with border-radius */
+  width: 50px; /* Adjust the width and height based on your design */
+  height: 50px;
+  margin-left: 43%;
+  margin-bottom: 10px;
+  
+}
+
+
+
+.feature_content h4 {
+  padding: 20px 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.feature_content p{
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: medium;
+  font-size: 15px;
+  padding: 0 20px;
+  padding-bottom: 20px;
+}
+
+.feature_content{
+  background-color: #DBD3D5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+.feature_content:hover .feature_icon{
+  background-color: #0056b3;
+}
+
+/*feature css end*/
+
+/*gallry css start*/
+
+.gallery_img{
+    margin: 0 10px;
+}
+.gallery{
+  margin-top: 20px;
+}
+/*gallry css end*/
+
+/*footer css start*/
+
+footer{
+  margin-top: 165px;
+  background-color: #010101;
+}
+
+.footer_common_head h4{
+  color: #01ecce;
+}
+.footer_text p{
+  color: white;
+}
+
+.footer_form{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Apply styles to the form container */
+.footer_form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the input box */
+.footer_form input {
+  padding: 10px;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 5px;
+  outline: none;
+}
+
+/* Style the submit button */
+.footer_form button {
+  padding: 10px 15px;
+  background-color: #01ecce; /* Change the color as needed */
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 10%;
+  text-transform: uppercase;
+}
+
+.footer_icon{
+  margin-bottom: 130px;
+}
+
+.footer_icon ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Adjust as needed */
+}
+
+.footer_icon li {
+  margin: 0 10px;
+  padding: 0;
+}
+
+.footer_icon a {
+  display: inline-block;
+  padding: 5px; /* Adjust padding as needed */
+  text-decoration: none;
+  color: #fff; /* Adjust text color as needed */
+  background-color: #01ecce; /* Replace with your desired background color */
+  border-radius: 5px;
+  font-size: 30px;
+  color: black; /* Adjust border-radius for the rectangle shape */
+}
+
+
+
+.footer_item_one p{
+  color: white;
+}
+
+.footer_item_two ul li {
+  color: white;
+}
+
+
+.footer_item_three ul li {
+  color: white;
+}
+
+.footer_item_four ul li {
+  color: white;
+}
+
+.footer_item_fifth ul li {
+  color: white;
+}
+
+.about_text{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 95px;
+}
+
+
+/*footer css end*/
+
