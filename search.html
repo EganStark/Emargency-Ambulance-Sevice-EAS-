@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search and Sortable Table</title>
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/search_style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#searchButton").click(function(){
+        var query = $("#searchInput").val();
+        $.ajax({
+          url: "search.php",
+          method: "POST",
+          data: {query: query},
+          success: function(data){
+            $("#tableBody").html(data);
+          }
+        });
+      });
+      
+      $("#searchInput").on("input", function(){
+        // This automatically updates the table as the user types
+        var query = $(this).val();
+        $.ajax({
+          url: "search.php",
+          method: "POST",
+          data: {query: query},
+          success: function(data){
+            $("#tableBody").html(data);
+          }
+        });
+      });
+    });
+  </script>
+
+  <style>
+
+    #dataTable{
+
+      margin-bottom: 100px;
+
+    }
+
+.search-container {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px; 
+}
+
+.banner_logo{
+  display: flex;
+  align-items: center;
+}
+.banner_logo h4{
+  font-family: 'Lilita+One', cursive;
+  font-weight: bold;
+  margin-right: -270px; 
+  color: rgba(2, 168, 113, 0.664);
+  font-size: 28px;
+}
+.banner_logo i{
+  color: rgba(2, 168, 113, 0.664);;
+}
+#banner {
+    background: url(./images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%; 
+    height: 700px;
+    position: relative;
+    
+}
+.banner_main_content {
+     margin-top: 93px;
+     font-family: 'Open Sans', sans-serif;;
+    /* Add other necessary styles for the container */
+  }
+
+  .banner_main_content p{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 250px;
+    color: white;
+    font-weight: bold;
+  }
+  
+
+  
+  .banner_main_content a.button:hover {
+    background-color: #0056b3; /* Change this to the hover color you want */
+  }
+
+  .banner_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity here */
+}
+/*search nav bar css start*/
+
+.navbar-nav .nav-item .nav-link{
+
+margin-left: 5px;
+color: black;
+font-family: 'Open Sans', sans-serif;
+font-size: 18px;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover{
+
+ background-color: #04a590;
+ color: white;
+ text-align: center;
+ font-weight: medium;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item{
+text-align: center;
+font-weight: medium;
+font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-nav .nav-item .nav-link:hover
+{
+color: #04a590; /* Change this to the desired hover color */
+}
+
+.banner_main_content {
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 50px;
+      background-color: #007bff; /* Change this to your desired button color */
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #0056b3; /* Change this to your desired button color on hover */
+    }
+
+  </style>
+
+
+
+</head>
+
+<body>
+
+ 
+
+     <!--nav bar html start-->
+<div class="header_main">
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-2">
+            <div class="banner_logo">
+                <h4>Ambulance Service</h4>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+        </div>
+
+        <div class="col-md-10">
+
+            <div class="navigation">
+
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container">
+                    
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Service
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="search.html">Search Ambulance</a></li>
+                              <li><a class="dropdown-item" href="Ongoing_Service.php">Ongoing Services</a></li>
+                            </ul>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="signup_form.html">Register</a>
+                          </li>   
+                        
+                        </ul>
+                        <form class="d-flex" role="search">
+
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-success" type="submit" style="font-family: 'Open Sans', sans-serif;">Search</button>
+
+                        </form>
+
+      
+                      </div>
+                    </div>
+                  </nav>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+
+
+<!--nav bar html end-->
+
+
+
+<!---Banner html start -->
+
+
+ <!--banner html start-->
+
+ <div id="banner">
+  <div class="banner_overlay">
+
+    <div class="banner_main">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="banner_main_content">
+                      <p>Search Your Desire Ambulance</p>
+                      <a href="#" class="button">Search</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  </div> <!-- Add this div for overlay -->
+  
+</div>
+<!--banner html end-->
+
+
+
+<!--Banner html end-->
+
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for data...">
+    <button id="searchButton">Search</button>
+  </div>
+
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Driver Name</th>
+        <th>Location</th>
+        <th>Contact</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <!-- Content will be dynamically loaded here -->
+    </tbody>
+  </table>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

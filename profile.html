@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        main {
+            padding: 30px 0;
+        }
+
+        .user-info, .driver-option {
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px 0;
+            margin-top: 50px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        h1, h2, p {
+            color: #333;
+        }
+
+        .btn {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header section -->
+<header class="text-center">
+    <h1>User Profile</h1>
+</header>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Service
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="signup_form.html">Search Ambulance</a></li>
+                        <li><a class="dropdown-item" href="#">Ambulance Information</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup_form.html">Register</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Main content section -->
+<main class="container">
+    <!-- User Information section -->
+    <section class="user-info">
+        <h2 class="text-center mb-4">User Information</h2>
+        <!-- Display user information using Bootstrap card -->
+        <div class="card">
+            <div class="card-body">
+                <!-- Placeholder image, replace with the actual user profile image -->
+                <img src="images/about.jpg" alt="User Profile" class="profile-image mx-auto d-block mb-3">
+                <p class="card-text"><strong>Name:</strong> Egan Stark</p>
+                <p class="card-text"><strong>Email:</strong> eganstark@example.com</p>
+                <p class="card-text"><strong>Phone Number:</strong> +1234567890</p>
+                <p class="card-text"><strong>Address:</strong> North, Winterfell</p>
+                <!-- Button to edit user details -->
+                <button class="btn btn-secondary btn-block" data-bs-toggle="modal" data-bs-target="#editUserModal">Edit User Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Become a Driver section -->
+    <section class="driver-option">
+        <h2 class="text-center mb-4">Become a Driver</h2>
+        <!-- Display the option to become a driver using Bootstrap card -->
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">If you want to become a driver and provide ambulance services, click the button below:</p>
+                <form action="update_driver_status.php" method="post">
+                    <input type="hidden" name="user_id" value="1"> <!-- Replace with the actual user ID -->
+                </form>
+                <form action="signup_form.html" method="post">
+                    <button type="submit" class="btn btn-success btn-block">Become a Driver</button>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer section -->
+<footer class="text-center">
+    <p>&copy; 2024 Your Ambulance Service. All rights reserved.</p>
+</footer>
+
+<!-- Edit User Modal -->
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editUserModalLabel">Edit User Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Add form elements for editing user details here -->
+                <form action="update_user_details.php" method="post">
+                    <!-- Replace with input fields for editing user details -->
+                    <div class="form-group mb-3">
+                        <label for="editName">Name</label>
+                        <input type="text" class="form-control" id="editName" name="editName" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="editEmail">Email</label>
+                        <input type="email" class="form-control" id="editEmail" name="editEmail" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="editPhone">Phone Number</label>
+                        <input type="tel" class="form-control" id="editPhone" name="editPhone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="editAddress">Address</label>
+                        <input type="text" class="form-control" id="editAddress" name="editAddress" placeholder="Enter your address">
+                    </div>
+                    <button type="submit" class="btn btn-success">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bootstrap JS and Popper.js links (required for Bootstrap components) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+</body>
+</html>

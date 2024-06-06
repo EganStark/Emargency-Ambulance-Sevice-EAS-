@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Croissant+One&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/signup_style.css">
+
+<style>
+
+  .form_main{
+   
+   background-color: gray;
+   height: 1100px;
+   width: 550px;
+   margin: 30px auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 30px;
+
+}
+
+</style>
+    
+</head>
+<body>
+
+    <div class="form_main_main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <h1>Sign Up</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form_main">
+                        <form action="signup.php" method="post">
+                            <label for="firstName">1. First Name</label><br>
+                            <input type="text" name="firstName" id="firstName" placeholder="Enter your first name" required><br><br>
+
+                            <label for="lastName">2. Last Name</label><br>
+                            <input type="text" name="lastName" id="lastName" placeholder="Enter your last name" required><br><br>
+
+                            <label for="email">3. Email</label><br>
+                            <input type="email" name="email" id="email" placeholder="Enter your email" required><br><br>
+
+                            <label for="contactNumber">4. Contact Number</label><br>
+                            <input type="text" name="contactNumber" id="contactNumber" placeholder="Enter your contact number" required><br><br>
+
+                            <label for="location">5. Location</label><br>
+                            <input type="text" name="location" id="location" placeholder="Enter your service location" required><br><br>
+
+                            <label for="nid">6. Your NID</label><br>
+                            <input type="text" name="nid" id="nid" placeholder="Enter your NID number" required><br><br>
+
+                            <label for="password">7. Password</label><br>
+                            <input type="password" name="password" id="password" placeholder="Enter your password" required><br><br>
+
+                            <label for="confirmPassword">8. Confirm Password</label><br>
+                            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password" required><br><br>
+
+                            <button class="submit_button" type="submit">Submit</button><br>
+                            <a class="have_an_account" href="login_form.html">Already have an account?</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

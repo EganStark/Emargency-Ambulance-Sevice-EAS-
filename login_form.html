@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Croissant+One&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login_style.css">
+
+    <style>
+
+        .login_admin_form{ 
+
+            margin-left: 70px;
+            color: white;
+            text-decoration: none;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="form_main_main">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h1>Login</h1>
+                </div>
+            </div>
+          </div>
+    
+         <div class="row">
+            <div class="col-md-12">
+                <div class="form_main">
+            
+                    <form action="login.php" method="post">
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+                        <label for="password">Password</label><br>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+
+                        <button class="submit_button" type="submit">Login</button><br>
+                        <a class="have_an_account"  href="signup_form.html">Didn't have an account? Sign Up</a><br>
+
+                        <a class="login_admin_form"  href="admin_login.html">Login as admin</a>
+
+                    </form>
+                </div>
+            </div>
+         </div>
+
+     </div>
+
+      
+    </div>
+
+    <script src="Js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
