@@ -51,7 +51,7 @@ $result = $stmt->get_result();
     <!-- Bootstrap CSS link -->
     <link rel="stylesheet" href="css/all.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@300&family=Oswald:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Custom styles -->
     <style>
@@ -61,16 +61,15 @@ $result = $stmt->get_result();
   align-items: center;
 }
 .banner_logo h4{
-  font-family: 'Lilita+One', cursive;
+  font-family: 'Dancing Script', cursive;
   font-weight: bold;
-  margin-right: -270px; 
-  color: rgba(2, 168, 113, 0.664);
-  font-size: 28px;
+  margin-right: 10px; 
+  color: red;
+  font-size: 30px;
 }
 .banner_logo i{
-  color: rgba(2, 168, 113, 0.664);;
+  color: red;
 }
-
         body {
             background-color: #f8f9fa;
         }
@@ -321,10 +320,10 @@ footer{
                             <a class="nav-link" aria-current="page" href="index.html">Home</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="#">About</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="#">Contact</a>
                           </li>
                           <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -333,6 +332,7 @@ footer{
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="search.html">Search Ambulance</a></li>
                               <li><a class="dropdown-item" href="Ongoing_Service.php">Ongoing Services</a></li>
+                              <li><hr class="dropdown-divider"></li>
                               <li><a class="dropdown-item" href="#">Ambulance Information</a></li>
                             </ul>
                           </li>
@@ -531,9 +531,10 @@ footer{
 
                   <div class="footer_item_one">
                       <p>Emergency Ambulance Service<br>
-                        
+                          1212, Soth Bannasree<br>
                           Dhaka, Bangladesh</p>
-                        
+                          <p>aniklal2020@gmail.com</p>
+                          <p>01537156605</p>
                   </div>
 
 

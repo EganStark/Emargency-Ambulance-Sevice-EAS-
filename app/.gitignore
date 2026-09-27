@@ -1,0 +1,6 @@
+node_modules/
+data/*.sqlite*
+data/private-uploads/
+test-results/
+playwright-report/
+.env

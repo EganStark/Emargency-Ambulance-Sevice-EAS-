@@ -370,9 +370,10 @@ footer{
 
                   <div class="footer_item_one">
                       <p>Emergency Ambulance Service<br>
-
+                          1212, Soth Bannasree<br>
                           Dhaka, Bangladesh</p>
-                          
+                          <p>aniklal2020@gmail.com</p>
+                          <p>01537156605</p>
                   </div>
 
 

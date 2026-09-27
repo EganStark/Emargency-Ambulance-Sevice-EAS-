@@ -1,0 +1,92 @@
+
+.content{
+    font-size: 25px;
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    text-align: justify;
+}
+
+/*form design*/
+
+.form_main{
+   
+    background-color: gray;
+    height: 700px;
+    width: 500px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+
+}
+.title{
+width: 150px;
+margin: 0 auto;
+margin-top: 50px;
+color: white;
+font-family: 'Bebas Neue', cursive;
+}
+.form_main form{
+    margin-top: 50px;
+}
+
+.form_main form input{
+
+    height: 40px;
+    width: 250px;
+    padding-left: 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 30px;
+    margin-top: 15px;
+    color: white;
+}
+.form_main form input::placeholder{
+
+    color: silver;
+    
+}
+.form_main form .submit_button{
+    margin-left: 60px;
+    padding: 10px 40px;
+    font-size: 20px;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(dodgerblue,teal);
+    
+}
+.form_main form .submit_button:hover{
+
+    box-shadow: 1px 1px 20px white;
+
+}
+.have_an_account{
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+}
+.form_main label{
+    color: white;
+}
+.form_main:hover{
+    box-shadow: 1px 1px 20px black;
+    transition: all linear 0.3s;
+}
+.form_main{
+    background: url(../images/banner4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+}
+
+.form_main_main{
+
+    background-color: gray;
+
+}
